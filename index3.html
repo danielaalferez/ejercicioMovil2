@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FORMULARIO DE CONTACTO</title>
+</head>
+<body>
+    <h3>FORMULARIO DE CONTACTO</h3>
+    <label for="name">
+        Nombre: <br><input type="text" id="name" name="user_name" />
+    </label>
+    <label for="correo">
+        Correo: <br><input type="text" id="correo" name="user_correo" />
+    </label>
+    <label for="mensaje">
+        Mensaje:<br><textarea id="mensaje" rows="6" cols="60"></textarea>
+    </label>
+    <button onclick="showAlert()">Enviar</button>
+
+    <script>
+        function showAlert() {
+            var input = document.getElementById("mensaje").value;
+            if (input.trim() === "") {
+                alert('El formulario está vacío');
+            } else {
+                alert('Datos enviados');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+<style>
+    body {
+        text-align: center;
+        padding-top: 50px; 
+    }
+    label, input, button {
+        display: block;
+        margin: 10px auto; 
+        width: 60%; 
+    }
+    label[for="mensaje"] {
+        margin-top: 20px; 
+    }
+    button {
+        width: 30%; 
+       color:darkblue;
+    }
+</style>
